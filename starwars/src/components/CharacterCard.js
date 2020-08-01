@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardHeader, CardBody, CardText } from "reactstrap"
+import { Card, CardHeader, CardBody, CardTitle, CardText } from "reactstrap";
 
 const CharacterCard = (props) => {
 
@@ -8,15 +8,15 @@ const CharacterCard = (props) => {
     return (
 
         <Card>
-            <div>
-                <h2>{character.name}</h2>
-            </div>
-            <div>
-                <p>{character.height}</p>
-                <p>{character.mass}</p>
-                <p>{character.hair_color}</p>
-                <p>{character.skin_color}</p>
-            </div>
+            <CardHeader>
+                <CardTitle>{character.name}</CardTitle>
+            </CardHeader>
+            <CardBody>
+                <CardText>Height: {character.height}</CardText>
+                <CardText>Weight: {character.mass}</CardText>
+                <CardText>Hair-Color: {character.hair_color}</CardText>
+                <CardText>Skin-Color: {character.skin_color}</CardText>
+            </CardBody>
         </Card>
 
     )
